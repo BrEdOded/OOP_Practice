@@ -77,10 +77,10 @@ namespace OOP_Pr_1
             }
             return false;
         }
-        public override void DrawLine()
+       /* public override void DrawLine()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             base.DrawLine();
-        }
+        }*/
     }
 }

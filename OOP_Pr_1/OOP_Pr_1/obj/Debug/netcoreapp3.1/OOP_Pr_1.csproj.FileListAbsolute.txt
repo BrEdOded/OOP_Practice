@@ -4,7 +4,6 @@ C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\bin\Debug\netcoreapp3.1\OOP
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\bin\Debug\netcoreapp3.1\OOP_Pr_1.runtimeconfig.dev.json
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\bin\Debug\netcoreapp3.1\OOP_Pr_1.dll
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\bin\Debug\netcoreapp3.1\OOP_Pr_1.pdb
-C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\obj\Debug\netcoreapp3.1\OOP_Pr_1.csproj.AssemblyReference.cache
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\obj\Debug\netcoreapp3.1\OOP_Pr_1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\obj\Debug\netcoreapp3.1\OOP_Pr_1.AssemblyInfoInputs.cache
 C:\Users\Михаил\source\repos\OOP_Pr_1\OOP_Pr_1\obj\Debug\netcoreapp3.1\OOP_Pr_1.AssemblyInfo.cs
