@@ -10,65 +10,56 @@ namespace OOP_Pr_1
     {
         static void Main()
         {
-            // Первое п/з
-            /*
-             Console.WriteLine("Hello World!");
-             Console.ReadLine();
-            */
+            Point Point1 = new Point(1, 3, '*');
+            Point1.DrawPoint();
 
-            // Второе п/з
-            /*
-            static void DrawPoint(int x, int y, char Symbol)
+            Point Point2 = new Point(4, 5, '#');
+            Point2.DrawPoint();
+
+            List<int> NumList = new List<int>();
+            NumList.Add(0);
+            NumList.Add(1);
+            NumList.Add(2);
+
+            int x = NumList[0];
+            int y = NumList[1];
+            int z = NumList[2];
+
+            foreach(int i in NumList)
             {
-                Console.SetCursorPosition(x, y);
-                Console.Write(Symbol);
+                Console.WriteLine(i);
             }
-            int x = 1;
-            int y = 3;
-            char Symbol = '*';
 
-            // Console.SetCursorPosition(x, y);
-            // Console.Write(Symbol);
-            DrawPoint(x, y, Symbol);
+            NumList.RemoveAt(0);
 
-            int x1 = 4;
-            int y1 = 5;
-            char Symbol1 = '#';
+            List<Point> PointList = new List<Point>();
+            PointList.Add(Point1);
+            PointList.Add(Point2);
 
-            //Console.SetCursorPosition(x1, y1);
-            //Console.Write(Symbol1);
-            DrawPoint(x1, y1, Symbol1);
-            */
+            //Homework
+            Console.WriteLine("Homework\n");
+            List<char> CharList = new List<char>();
+            CharList.Add('*');
+            CharList.Add('#');
+            CharList.Add('@');
+            CharList.Add('%');
+            foreach (char k in CharList)
+            {
+                Console.WriteLine(k);
+            }
 
-            // Третье п/з
-            /*
-            Point Point1 = new Point();
-            Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';
-            Point1.DrawPoint();
+            Point Point3 = new Point(1, 1, '*');
+            Point Point4 = new Point(2, 3, '#');
+            Point Point5 = new Point(5, 8, '@');
+            Point Point6 = new Point(6, 1, '%');
 
-            Point Point2 = new Point();
-            Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';
-            Point2.DrawPoint();
-            */
+            List<Point> NewPointList = new List<Point>();
+            NewPointList.Add(Point3);
+            NewPointList.Add(Point4);
+            NewPointList.Add(Point5);
+            NewPointList.Add(Point6);
 
-            // Четвертое п/з
-            /**/
-            Point Point1 = new Point();
-            /*Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';*/
-            Point1.DrawPoint();
-
-            Point Point2 = new Point();
-           /* Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';*/
-            Point2.DrawPoint();
-
+            Console.ReadLine();
         }
     }
 }
