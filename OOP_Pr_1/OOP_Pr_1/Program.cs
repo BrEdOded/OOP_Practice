@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OOP_Pr_1
@@ -10,60 +11,75 @@ namespace OOP_Pr_1
     {
         static void Main()
         {
-            /* Point Point1 = new Point(1, 3, '*');
-             Point1.DrawPoint();
+            /*if (true) { 
+            Console.SetBufferSize(200, 50);
 
-             Point Point2 = new Point(4, 5, '#');
-             Point2.DrawPoint();*/
+            //Отрисовка рамки
+            HorizontalLine UpHorizontalLine = new HorizontalLine(0,78,0,'-');
+            UpHorizontalLine.DrawLine();
+            HorizontalLine DownHorizontalLine = new HorizontalLine(0, 78, 24, '-');
+            DownHorizontalLine.DrawLine();
+            VerticalLine LeftVerticalLine = new VerticalLine(0, 24, 0, '|');
+            LeftVerticalLine.DrawLine();
+            VerticalLine RightVerticalLine = new VerticalLine(0, 24, 78, '|');
+            RightVerticalLine.DrawLine();
 
-            int x = 1;
-            Function1(x);
-            Console.WriteLine("Call Function1 = " + x);
+            //Отрисовка точек
+            Point Point1 = new Point(4,5,'*');
+            Point1.DrawPoint();
 
-            x = 1;
-            Function2(x);
-            Console.WriteLine("Call Function2 = " + x);
+            //Отрисовка змейки
+            Snake Snake = new Snake(Point1, 4, Direction.RIGHT);
+            Snake.DrawLine();
 
-            x = 1;
-            Function3(x);
-            Console.WriteLine("Call Function3 = " + x);
+            //Создание еды
+            FoodCreator FoodCreator = new FoodCreator(80, 25, '$');
+            Point Food = FoodCreator.CreateFood();
+            Food.DrawPoint();
 
-            Point Point1 = new Point(1, 3, '*');
-            Move(Point1, 10, 10);
-            Console.WriteLine("Call Move.Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
+            //Перемещение змейки
+            while(true)
+            {
+                if (Snake.Eat(Food))
+                {
+                    Food = FoodCreator.CreateFood();
+                    Food.DrawPoint();
+                }
+                else Snake.Move();
+                Thread.Sleep(100);
 
-            Point Point2 = new Point(4, 5, '#');
-            Point1 = Point2;
-            Point2.x = 8;
-            Point2.y = 8;
-            Console.WriteLine("Point1 = Point2: Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo Key = Console.ReadKey();
+                    Snake.ChangeTheWay(Key.Key);
+                }
+                Thread.Sleep(200);
+                Snake.Move();
+            }
+            }*/
 
-            Point1 = new Point(1, 3, '*');
-            Update(Point1);
-            Console.WriteLine("Call Move.Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
 
-            Console.ReadLine();
-        }
-        public static void Function1(int Value)
-        {
+            VerticalLine vertical1 = new VerticalLine(0, 10, 5, '%');
+            Draw(vertical1);
 
-        }
-        public static void Function2(int Value)
-        {
-            Value = Value++;
-        }
-        public static void Function3(int X)
-        {
-            X = X++;
-        }
-        public static void Move(Point Point, int dx, int dy)
-        {
-            Point.x = Point.x + dx;
-            Point.y = Point.y + dy;
-        }
-        public static void Update(Point Point)
-        {
-            Point = new Point();
+            Point point = new Point(4, 5, '*');
+            Figure FigureSnake = new Snake(point, 4, Direction.RIGHT);
+            Draw(FigureSnake);
+            Snake snake = (Snake)FigureSnake;
+
+            HorizontalLine horizontal1 = new HorizontalLine(0, 5, 6, '&');
+
+            List<Figure> figures = new List<Figure>();
+            figures.Add(FigureSnake);
+            figures.Add(vertical1);
+            figures.Add(horizontal1);
+
+            foreach (var f in figures) f.DrawLine();
+
+            static void Draw(Figure figure)
+            {
+                figure.DrawLine();
+            }
         }
     }
 }
