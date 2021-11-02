@@ -10,65 +10,60 @@ namespace OOP_Pr_1
     {
         static void Main()
         {
-            // Первое п/з
-            /*
-             Console.WriteLine("Hello World!");
-             Console.ReadLine();
-            */
+            /* Point Point1 = new Point(1, 3, '*');
+             Point1.DrawPoint();
 
-            // Второе п/з
-            /*
-            static void DrawPoint(int x, int y, char Symbol)
-            {
-                Console.SetCursorPosition(x, y);
-                Console.Write(Symbol);
-            }
+             Point Point2 = new Point(4, 5, '#');
+             Point2.DrawPoint();*/
+
             int x = 1;
-            int y = 3;
-            char Symbol = '*';
+            Function1(x);
+            Console.WriteLine("Call Function1 = " + x);
 
-            // Console.SetCursorPosition(x, y);
-            // Console.Write(Symbol);
-            DrawPoint(x, y, Symbol);
+            x = 1;
+            Function2(x);
+            Console.WriteLine("Call Function2 = " + x);
 
-            int x1 = 4;
-            int y1 = 5;
-            char Symbol1 = '#';
+            x = 1;
+            Function3(x);
+            Console.WriteLine("Call Function3 = " + x);
 
-            //Console.SetCursorPosition(x1, y1);
-            //Console.Write(Symbol1);
-            DrawPoint(x1, y1, Symbol1);
-            */
+            Point Point1 = new Point(1, 3, '*');
+            Move(Point1, 10, 10);
+            Console.WriteLine("Call Move.Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
 
-            // Третье п/з
-            /*
-            Point Point1 = new Point();
-            Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';
-            Point1.DrawPoint();
+            Point Point2 = new Point(4, 5, '#');
+            Point1 = Point2;
+            Point2.x = 8;
+            Point2.y = 8;
+            Console.WriteLine("Point1 = Point2: Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
 
-            Point Point2 = new Point();
-            Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';
-            Point2.DrawPoint();
-            */
+            Point1 = new Point(1, 3, '*');
+            Update(Point1);
+            Console.WriteLine("Call Move.Point1.x = " + Point1.x + ", Point1.y = " + Point1.y);
 
-            // Четвертое п/з
-            /**/
-            Point Point1 = new Point();
-            /*Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';*/
-            Point1.DrawPoint();
+            Console.ReadLine();
+        }
+        public static void Function1(int Value)
+        {
 
-            Point Point2 = new Point();
-           /* Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';*/
-            Point2.DrawPoint();
-
+        }
+        public static void Function2(int Value)
+        {
+            Value = Value++;
+        }
+        public static void Function3(int X)
+        {
+            X = X++;
+        }
+        public static void Move(Point Point, int dx, int dy)
+        {
+            Point.x = Point.x + dx;
+            Point.y = Point.y + dy;
+        }
+        public static void Update(Point Point)
+        {
+            Point = new Point();
         }
     }
 }
