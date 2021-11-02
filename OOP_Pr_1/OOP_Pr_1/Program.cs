@@ -10,65 +10,21 @@ namespace OOP_Pr_1
     {
         static void Main()
         {
-            // Первое п/з
-            /*
-             Console.WriteLine("Hello World!");
-             Console.ReadLine();
-            */
+            Console.SetBufferSize(120, 30);
 
-            // Второе п/з
-            /*
-            static void DrawPoint(int x, int y, char Symbol)
-            {
-                Console.SetCursorPosition(x, y);
-                Console.Write(Symbol);
-            }
-            int x = 1;
-            int y = 3;
-            char Symbol = '*';
+            HorizontalLine UpHorizontalLine = new HorizontalLine(0,78,0,'-');
+            UpHorizontalLine.DrawLine();
+            HorizontalLine DownHorizontalLine = new HorizontalLine(0, 78, 24, '-');
+            DownHorizontalLine.DrawLine();
+            VerticalLine LeftVerticalLine = new VerticalLine(0, 24, 0, '|');
+            LeftVerticalLine.DrawLine();
+            VerticalLine RightVerticalLine = new VerticalLine(0, 24, 78, '|');
+            RightVerticalLine.DrawLine();
 
-            // Console.SetCursorPosition(x, y);
-            // Console.Write(Symbol);
-            DrawPoint(x, y, Symbol);
-
-            int x1 = 4;
-            int y1 = 5;
-            char Symbol1 = '#';
-
-            //Console.SetCursorPosition(x1, y1);
-            //Console.Write(Symbol1);
-            DrawPoint(x1, y1, Symbol1);
-            */
-
-            // Третье п/з
-            /*
-            Point Point1 = new Point();
-            Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';
+            Point Point1 = new Point(3,3,'*');
             Point1.DrawPoint();
 
-            Point Point2 = new Point();
-            Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';
-            Point2.DrawPoint();
-            */
-
-            // Четвертое п/з
-            /**/
-            Point Point1 = new Point();
-            /*Point1.x = 1;
-            Point1.y = 3;
-            Point1.Symbol = '*';*/
-            Point1.DrawPoint();
-
-            Point Point2 = new Point();
-           /* Point2.x = 4;
-            Point2.y = 5;
-            Point2.Symbol = '#';*/
-            Point2.DrawPoint();
-
+            Console.ReadLine();
         }
     }
 }
