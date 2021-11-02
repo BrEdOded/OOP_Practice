@@ -11,6 +11,7 @@ namespace OOP_Pr_1
     {
         static void Main()
         {
+            int CountOfGame = 0;
            
             Console.SetBufferSize(120, 30);
 
@@ -36,7 +37,7 @@ namespace OOP_Pr_1
             {
                 if (Walls.IsHit(Snake) || Snake.IsHitTail())
                 {
-                    Console.SetCursorPosition(25, 25);
+                    Console.SetCursorPosition(25, 26);
                     Console.WriteLine("GAME OVER!");
                     Console.ReadLine();
                     break; 
@@ -47,6 +48,11 @@ namespace OOP_Pr_1
                     Food = FoodCreator.CreateFood();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Food.DrawPoint();
+
+                    CountOfGame++;
+                    Console.SetCursorPosition(25, 25);
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine("Count: " + CountOfGame);
                 }
                 else Snake.Move();
                 Thread.Sleep(100);
@@ -56,8 +62,6 @@ namespace OOP_Pr_1
                     ConsoleKeyInfo Key = Console.ReadKey();
                     Snake.ChangeTheWay(Key.Key);
                 }
-                Thread.Sleep(200);
-                Snake.Move();
             }
         }
     }
